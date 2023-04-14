@@ -12,8 +12,9 @@ h3 {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-content: flex-start;
+    align-content: flex;
     gap: 30px;
+    margin: 30px
 }
 .card {
     background-color: silver;
@@ -61,10 +62,11 @@ h3 {
     top: 0;
     height: 100%;
     left: 0;
-    width: 100%;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 calc(50% - 300px)
 }
 .empty::after {
     content: "...";
@@ -80,6 +82,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .modal {
@@ -89,6 +92,20 @@ h3 {
     width: calc(100% - 60px);
     max-width: 300px;
     max-height: calc(100% - 60px);
+    position: relative;
+}
+.modal h2 {
+    margin: 0;
+}
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.modal-close:hover {
+    color: coral;
 }
 
 .modal form {
@@ -100,4 +117,21 @@ input, textarea {
     font-size: inherit;
     border: 1px solid #dedede90;
     background-color: transparent;
+}
+nav {
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    align-content: center;
+}
+nav i {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+nav i:hover {
+    color: silver;
 }
