@@ -1,4 +1,4 @@
-const box = document.querySelector(".container");
+
 function createCard(cat, el = box) {
     const card = document.createElement("div");
     card.className = "card";
@@ -57,8 +57,6 @@ function createCard(cat, el = box) {
 //     }
 // }
 
-const user = "84Shadowind";
-const path = `https://cats.petiteweb.dev/api/single/${user}`;
 
 fetch(path + "/show")
     .then(function(res) {
